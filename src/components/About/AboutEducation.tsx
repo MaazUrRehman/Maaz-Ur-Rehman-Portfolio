@@ -1,0 +1,6 @@
+import AboutIcon from "@/components/About/AboutIcon";
+import { aboutCertifications, aboutEducation } from "@/data/skills";
+
+export default function AboutEducation() {
+	return <section className="about-records subsection"><div className="container records-grid"><section className="record-panel"><div className="section-heading page-section-heading"><div><span className="section-kicker">Academic foundation</span><h2>Education</h2></div></div><div className="record-list">{aboutEducation.map(([qualification, institution, period]) => <article className="record-card" key={qualification}><span className="record-icon"><AboutIcon name="education" /></span><div><strong>{qualification}</strong><span>{institution}</span><small>{period}</small></div></article>)}</div></section><section className="record-panel certification-panel"><div className="section-heading page-section-heading"><div><span className="section-kicker">Proof of learning</span><h2>Certifications</h2></div></div><div className="record-list certification-list">{aboutCertifications.map(([certificate, issuer, detail]) => <article className="record-card certification-card" key={`${certificate}-${issuer}`}><span className="record-icon"><AboutIcon name="certificate" /></span><div><strong>{certificate}</strong><span>{issuer}</span><p>{detail}</p></div></article>)}</div></section></div></section>;
+}

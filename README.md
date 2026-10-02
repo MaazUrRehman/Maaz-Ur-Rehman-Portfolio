@@ -2,6 +2,8 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+For production SEO, configure `SITE_URL` before building. Optional Search Console verification and staging settings are listed in `.env.example`. See [SEO.md](./SEO.md) for deployment and sitemap submission steps. Run `npm run seo:check` after `npm run build` to audit the generated pages.
+
 First, run the development server:
 
 ```bash
